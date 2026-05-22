@@ -1,0 +1,139 @@
+.pagina { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; padding-bottom: 2rem; }
+
+.encabezado { display: flex; flex-direction: column; gap: 0.25rem; }
+.titulo { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-text); }
+.subtitulo { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
+
+/* Tarjetas resumen */
+.resumen { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; }
+.resumenCard {
+  display: flex; flex-direction: column; gap: 0.25rem; padding: 1rem;
+  background: var(--color-bg-card); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); text-align: center;
+}
+.resumenDestacado {
+  background: var(--color-primary-alpha); border-color: var(--color-primary);
+}
+.resumenLabel { font-size: var(--font-size-xs); color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+.resumenValor { font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-text); }
+.resumenValorGrande { font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-primary); }
+
+/* Sección */
+.seccion {
+  background: var(--color-bg-card); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 1.25rem;
+  display: flex; flex-direction: column; gap: 0.875rem;
+}
+.tituloSeccion {
+  font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);
+  color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.07em;
+}
+
+/* Campos */
+.grupo { display: flex; flex-direction: column; gap: 0.375rem; }
+.doble { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.label { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text); }
+.ayuda { font-weight: var(--font-weight-normal); color: var(--color-text-secondary); }
+
+.input {
+  padding: 0.6rem 0.875rem; border: 1.5px solid var(--color-border); border-radius: var(--radius-md);
+  background: var(--color-bg); color: var(--color-text); font-size: var(--font-size-sm);
+  outline: none; width: 100%; transition: border-color var(--transition-fast);
+}
+.input:focus { border-color: var(--color-primary); }
+
+.select {
+  padding: 0.6rem 0.875rem; border: 1.5px solid var(--color-border); border-radius: var(--radius-md);
+  background: var(--color-bg); color: var(--color-text); font-size: var(--font-size-sm);
+  outline: none; width: 100%; transition: border-color var(--transition-fast); cursor: pointer;
+}
+.select:focus { border-color: var(--color-primary); }
+
+/* Info material lateral */
+.infoMaterial {
+  display: flex; flex-direction: column; gap: 0.2rem; padding: 0.625rem 0.75rem;
+  background: var(--color-bg-secondary); border-radius: var(--radius-md); justify-content: center;
+}
+.infoLabel { font-size: 0.7rem; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.infoValor { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); }
+
+/* Precio */
+.precioWrap {
+  display: flex; align-items: center;
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+.precioWrap:focus-within { border-color: var(--color-primary); }
+.prefijo {
+  padding: 0 0.625rem; font-size: var(--font-size-sm); color: var(--color-text-secondary);
+  background: var(--color-bg-secondary); border-right: 1px solid var(--color-border);
+  flex-shrink: 0; align-self: stretch; display: flex; align-items: center;
+}
+.inputPrecio { flex: 1; padding: 0.6rem 0.625rem; border: none; background: var(--color-bg); color: var(--color-text); font-size: var(--font-size-sm); outline: none; }
+
+/* Porcentaje */
+.porcentajeWrap {
+  display: flex; align-items: center;
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+.porcentajeWrap:focus-within { border-color: var(--color-primary); }
+.inputPorcentaje { flex: 1; padding: 0.6rem 0.625rem; border: none; background: var(--color-bg); color: var(--color-text); font-size: var(--font-size-sm); outline: none; }
+.sufijo {
+  padding: 0 0.625rem; font-size: var(--font-size-sm); color: var(--color-text-secondary);
+  background: var(--color-bg-secondary); border-left: 1px solid var(--color-border);
+  flex-shrink: 0; align-self: stretch; display: flex; align-items: center;
+}
+
+/* Botón calcular */
+.btnCalcular {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.75rem 1.5rem; background: var(--color-primary); color: white;
+  border-radius: var(--radius-md); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);
+  transition: background var(--transition-fast); width: 100%; margin-top: 0.25rem;
+}
+.btnCalcular:hover:not(:disabled) { background: var(--color-primary-dark); }
+.btnCalcular:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* Desglose */
+.desglose { display: flex; flex-direction: column; gap: 0; }
+.desgloseRow {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-sm); color: var(--color-text);
+}
+.desgloseRow:last-child { border-bottom: none; }
+.desgloseSubtotal { font-weight: var(--font-weight-semibold); background: var(--color-bg-secondary); border-radius: var(--radius-sm); }
+.desgloseCosto { font-weight: var(--font-weight-bold); color: var(--color-text); }
+.desglosePrecio {
+  font-weight: var(--font-weight-bold); background: var(--color-primary-alpha);
+  border-radius: var(--radius-sm); color: var(--color-primary);
+}
+.precioFinal { font-size: var(--font-size-lg); color: var(--color-primary); }
+
+/* Historial */
+.historialEncabezado { display: flex; align-items: center; justify-content: space-between; }
+.btnLimpiar {
+  display: flex; align-items: center; gap: 0.3rem; padding: 0.35rem 0.75rem;
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-full);
+  font-size: var(--font-size-xs); color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+.btnLimpiar:hover { border-color: var(--color-danger); color: var(--color-danger); }
+
+.historialLista { list-style: none; display: flex; flex-direction: column; gap: 0.375rem; }
+.historialItem {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.625rem;
+  padding: 0.55rem 0.75rem; background: var(--color-bg-secondary); border-radius: var(--radius-md);
+}
+.historialInfo { display: flex; flex-direction: column; gap: 0.1rem; flex: 1; min-width: 0; }
+.historialMaterial { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.historialFecha { font-size: var(--font-size-xs); color: var(--color-text-secondary); }
+.historialPrecios { display: flex; flex-direction: column; align-items: flex-end; gap: 0.1rem; flex-shrink: 0; }
+.historialCosto { font-size: var(--font-size-xs); color: var(--color-text-secondary); }
+.historialVenta { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-primary); }
+
+@media (max-width: 480px) {
+  .resumen { grid-template-columns: 1fr; }
+  .doble { grid-template-columns: 1fr; }
+}

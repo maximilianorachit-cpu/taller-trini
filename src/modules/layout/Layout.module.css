@@ -1,0 +1,48 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-overlay);
+  z-index: var(--z-overlay);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-left: 0;
+  transition: margin-left var(--transition);
+}
+
+/* En desktop el sidebar es persistente */
+@media (min-width: 1024px) {
+  .contenido {
+    margin-left: var(--sidebar-width);
+  }
+}
+
+.main {
+  flex: 1;
+  padding: var(--content-padding);
+  overflow-y: auto;
+  background: var(--color-bg);
+  transition: background-color var(--transition);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+}

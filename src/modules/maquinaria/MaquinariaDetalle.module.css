@@ -1,0 +1,185 @@
+.pagina { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; padding-bottom: 2rem; }
+
+.noEncontrado {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 1rem; padding: 4rem 1rem; text-align: center; color: var(--color-text-secondary);
+}
+.btnVolverSimple {
+  display: flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem;
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-full);
+  font-size: var(--font-size-sm); color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+.btnVolverSimple:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+.encabezado { display: flex; align-items: center; gap: 0.75rem; }
+.btnVolver {
+  display: flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: var(--radius-md);
+  color: var(--color-text-secondary); transition: background var(--transition-fast); flex-shrink: 0;
+}
+.btnVolver:hover { background: var(--color-bg-hover); }
+.acciones { display: flex; gap: 0.4rem; margin-left: auto; }
+.btnAccion {
+  display: flex; align-items: center; gap: 0.3rem; padding: 0.45rem 0.875rem;
+  border-radius: var(--radius-full); border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary); transition: all var(--transition-fast);
+}
+.btnAccion:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-alpha); }
+.btnEliminar:hover { border-color: var(--color-danger); color: var(--color-danger); background: var(--color-danger-bg); }
+
+/* Perfil */
+.perfil {
+  display: flex; align-items: center; gap: 1rem; padding: 1.25rem;
+  background: var(--color-bg-card); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+.alerta_proxima { border-left: 4px solid var(--color-warning); }
+.alerta_urgente { border-left: 4px solid var(--color-danger); }
+.alerta_vencida { border-left: 4px solid var(--color-danger); }
+
+.perfilFoto {
+  width: 64px; height: 64px; border-radius: var(--radius-md);
+  background: var(--color-primary-alpha);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.fotoImg  { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); }
+.fotoIcono { color: var(--color-primary); }
+
+.perfilInfo { flex: 1; display: flex; flex-direction: column; gap: 0.3rem; }
+.nombre { font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-text); }
+.sub    { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
+.badge  {
+  display: inline-block; padding: 0.2rem 0.625rem; border-radius: var(--radius-full);
+  font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); width: fit-content;
+}
+
+/* Alerta banner */
+.alertaBanner {
+  display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem;
+  border-radius: var(--radius-md); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);
+}
+.banner_proxima { background: var(--color-warning-bg); color: var(--color-warning); }
+.banner_urgente { background: var(--color-danger-bg);  color: var(--color-danger);  }
+.banner_vencida { background: var(--color-danger-bg);  color: var(--color-danger);  }
+
+/* Secciones */
+.seccion {
+  background: var(--color-bg-card); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 1.25rem;
+  display: flex; flex-direction: column; gap: 0.875rem;
+}
+.tituloSeccion {
+  font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);
+  color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.07em;
+}
+
+.fichaGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+.fichaFull { grid-column: 1 / -1; }
+.fichaItem {
+  display: flex; flex-direction: column; gap: 0.15rem; padding: 0.625rem 0.75rem;
+  background: var(--color-bg-secondary); border-radius: var(--radius-md);
+}
+.fichaLabel { font-size: 0.7rem; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.fichaValor { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); }
+.texto_proxima { color: var(--color-warning); }
+.texto_urgente { color: var(--color-danger); }
+.texto_vencida { color: var(--color-danger); }
+
+.btnManual {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: var(--font-size-sm); color: var(--color-primary);
+  font-weight: var(--font-weight-medium); text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+.btnManual:hover { opacity: 0.75; }
+
+/* Formulario mantención */
+.btnRegistrar {
+  display: flex; align-items: center; gap: 0.35rem; padding: 0.45rem 0.875rem;
+  background: var(--color-primary-alpha); color: var(--color-primary);
+  border-radius: var(--radius-md); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);
+  transition: background var(--transition-fast); width: fit-content;
+}
+.btnRegistrar:hover { background: var(--color-primary-alpha-strong); }
+
+.formMant { display: flex; flex-direction: column; gap: 0.625rem; }
+.inputMant {
+  padding: 0.6rem 0.875rem; border: 1.5px solid var(--color-border); border-radius: var(--radius-md);
+  background: var(--color-bg); color: var(--color-text); font-size: var(--font-size-sm);
+  resize: vertical; outline: none; width: 100%;
+  transition: border-color var(--transition-fast);
+}
+.inputMant:focus { border-color: var(--color-primary); }
+
+.formMantRow { display: flex; align-items: center; gap: 0.5rem; }
+
+.precioWrap {
+  display: flex; align-items: center; flex: 1;
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+.precioWrap:focus-within { border-color: var(--color-primary); }
+.prefijo {
+  padding: 0 0.625rem; font-size: var(--font-size-sm); color: var(--color-text-secondary);
+  background: var(--color-bg-secondary); border-right: 1px solid var(--color-border);
+  flex-shrink: 0; align-self: stretch; display: flex; align-items: center;
+}
+.inputMantPrecio {
+  flex: 1; padding: 0.5rem 0.625rem; border: none;
+  background: var(--color-bg); color: var(--color-text); font-size: var(--font-size-sm); outline: none;
+}
+
+.btnConfirmar {
+  display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem 0.875rem;
+  background: var(--color-primary); color: white; border-radius: var(--radius-md);
+  font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);
+  transition: background var(--transition-fast); white-space: nowrap;
+}
+.btnConfirmar:hover:not(:disabled) { background: var(--color-primary-dark); }
+.btnConfirmar:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btnCancelar {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: var(--radius-md);
+  color: var(--color-text-secondary); transition: background var(--transition-fast); flex-shrink: 0;
+}
+.btnCancelar:hover { background: var(--color-bg-hover); }
+
+/* Historial */
+.historialLista { list-style: none; display: flex; flex-direction: column; gap: 0.375rem; }
+.historialItem {
+  display: flex; align-items: baseline; gap: 0.625rem; padding: 0.5rem 0.75rem;
+  background: var(--color-bg-secondary); border-radius: var(--radius-md);
+}
+.historialFecha  { font-size: var(--font-size-xs); color: var(--color-text-secondary); flex-shrink: 0; }
+.historialDetalle { flex: 1; font-size: var(--font-size-sm); color: var(--color-text); }
+.historialCosto  { font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); color: var(--color-text-secondary); flex-shrink: 0; }
+
+/* Modal */
+.overlay {
+  position: fixed; inset: 0; background: var(--color-bg-overlay);
+  z-index: var(--z-modal); display: flex; align-items: center; justify-content: center; padding: 1rem;
+}
+.dialogo {
+  background: var(--color-bg-card); border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl); padding: 1.5rem;
+  max-width: 380px; width: 100%; box-shadow: var(--shadow-lg);
+  display: flex; flex-direction: column; gap: 0.875rem;
+}
+.dialogo h3 { font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-text); }
+.dialogo p  { font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: 1.6; }
+.dialogoAcciones { display: flex; gap: 0.625rem; justify-content: flex-end; margin-top: 0.25rem; }
+.btnCancelarDialog {
+  padding: 0.5rem 1rem; border-radius: var(--radius-md); border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-sm); color: var(--color-text-secondary); transition: background var(--transition-fast);
+}
+.btnCancelarDialog:hover { background: var(--color-bg-secondary); }
+.btnConfirmarEliminar {
+  padding: 0.5rem 1rem; border-radius: var(--radius-md);
+  background: var(--color-danger); color: white;
+  font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold);
+  transition: opacity var(--transition-fast);
+}
+.btnConfirmarEliminar:hover { opacity: 0.85; }

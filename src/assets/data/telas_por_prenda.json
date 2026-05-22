@@ -1,0 +1,45 @@
+{
+  "polera": {
+    "verano": ["algodón pima", "popelina", "lino sintético", "viscosa", "modal"],
+    "otoño":  ["algodón pima", "viscosa", "modal"],
+    "invierno": ["polar", "micropolar", "friza liviana"],
+    "primavera": ["algodón pima", "lino sintético", "modal"]
+  },
+  "jeans": {
+    "verano": ["mezclilla liviana", "lino", "gabardina liviana"],
+    "otoño":  ["mezclilla media", "gabardina", "pana liviana"],
+    "invierno": ["mezclilla gruesa", "pana", "gabardina forrada"],
+    "primavera": ["mezclilla liviana", "gabardina"]
+  },
+  "vestido": {
+    "verano": ["popelina", "lino", "viscosa", "gasa", "modal"],
+    "otoño":  ["viscosa", "modal", "crepé", "gabardina liviana"],
+    "invierno": ["polar", "friza", "paño", "terciopelo"],
+    "primavera": ["popelina", "viscosa", "lino sintético", "chiffon"]
+  },
+  "cartera": {
+    "todo": ["cuero sintético", "lona gruesa", "cordura", "mezclilla gruesa", "tapicería"]
+  },
+  "bolso": {
+    "todo": ["lona", "cordura", "cuero sintético", "mezclilla gruesa", "impermeable"]
+  },
+  "mochila": {
+    "todo": ["cordura", "lona impermeable", "polyester resistente", "nylon", "ripstop"]
+  },
+  "sabanas": {
+    "verano": ["percal", "pima", "lino", "bambú"],
+    "invierno": ["franela", "polar", "micropolar"],
+    "otras": ["percal", "microfibra", "pima"]
+  },
+  "cortinas": {
+    "verano": ["gasa", "voile", "lino sintético", "organza"],
+    "invierno": ["terciopelo", "blackout", "paño grueso", "jacquard"],
+    "otras": ["voile", "lino sintético"]
+  },
+  "traje-baile": {
+    "todo": ["lycra", "strech brillante", "malla", "raso", "tafetán", "organza", "encaje"]
+  },
+  "delantal": {
+    "todo": ["algodón crea", "popelina", "drill", "gabardina", "lino sintético"]
+  }
+}

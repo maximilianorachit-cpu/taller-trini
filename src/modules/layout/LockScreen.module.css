@@ -1,0 +1,139 @@
+.pantalla {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-lock);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a0a2e 0%, #0f0a1e 40%, #2a0a1e 100%);
+  padding: 1rem;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Encabezado */
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.appNombre {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.titulo {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: #fff;
+  margin-top: 0.25rem;
+}
+
+.subtitulo {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+/* Puntos del PIN */
+.puntos {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.punto {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.punto.lleno {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* Error */
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-md);
+  color: #fca5a5;
+  font-size: var(--font-size-sm);
+  width: 100%;
+  text-align: left;
+}
+
+.bloqueadoTimer {
+  color: var(--color-warning);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* Teclado numérico */
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.tecla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  cursor: pointer;
+}
+
+.tecla:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tecla:active:not(:disabled) {
+  background: var(--color-primary-alpha-strong);
+  transform: scale(0.95);
+}
+
+.tecla:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.teclaEspecial {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.teclaVacia {
+  height: 64px;
+}

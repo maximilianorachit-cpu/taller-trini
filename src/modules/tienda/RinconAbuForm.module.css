@@ -1,0 +1,19 @@
+.pagina { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; padding-bottom: 5rem; }
+.encabezado { display: flex; align-items: center; gap: 0.75rem; }
+.btnVolver { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: var(--radius-md); color: var(--color-text-secondary); transition: background var(--transition-fast); flex-shrink: 0; }
+.btnVolver:hover { background: var(--color-bg-hover); }
+.titulo { display: flex; align-items: center; gap: 0.5rem; font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-text); }
+.corazon { color: #ec4899; }
+.previewWrap { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); aspect-ratio: 16/9; background: var(--color-bg-secondary); }
+.previewImg { width: 100%; height: 100%; object-fit: contain; display: block; }
+.seccion { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; gap: 0.875rem; }
+.grupo { display: flex; flex-direction: column; gap: 0.375rem; }
+.label { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text); }
+.req { color: var(--color-danger); }
+.input, .textarea { padding: 0.6rem 0.875rem; border: 1.5px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); color: var(--color-text); font-size: var(--font-size-sm); outline: none; width: 100%; transition: border-color var(--transition-fast); }
+.input:focus, .textarea:focus { border-color: #ec4899; }
+.textarea { resize: vertical; font-family: inherit; line-height: 1.6; font-style: italic; }
+.footer { position: fixed; bottom: 0; left: 0; right: 0; padding: 0.875rem 1rem; background: var(--color-bg-card); border-top: 1px solid var(--color-border); z-index: var(--z-sticky); display: flex; justify-content: center; }
+.btnGuardar { display: flex; align-items: center; gap: 0.4rem; padding: 0.7rem 2rem; background: #ec4899; color: white; border-radius: var(--radius-full); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); transition: opacity var(--transition-fast); max-width: 400px; width: 100%; justify-content: center; }
+.btnGuardar:hover:not(:disabled) { opacity: 0.88; }
+.btnGuardar:disabled { opacity: 0.45; cursor: not-allowed; }
