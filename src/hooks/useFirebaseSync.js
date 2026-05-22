@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from 'react'
-import { firebaseActivo, sincronizarTodo, restaurarTodo, autenticar } from '../services/syncService.js'
+import { sincronizarTodo, restaurarTodo, autenticar } from '../services/syncService.js'
+import { firebaseActivo } from '../services/firebase.js'
 import { useAppStore }       from '../store/appStore.js'
 import { useClientesStore }  from '../store/clientesStore.js'
 import { usePedidosStore }   from '../store/pedidosStore.js'
