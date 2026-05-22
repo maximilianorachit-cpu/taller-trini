@@ -15,7 +15,8 @@
     "zustand": "^4.5.4",
     "firebase": "^10.13.0",
     "idb": "^8.0.0",
-    "lucide-react": "^0.462.0"
+    "lucide-react": "^0.462.0",
+    "three": "^0.169.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
